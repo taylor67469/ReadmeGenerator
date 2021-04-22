@@ -1,4 +1,4 @@
-function createReadMe(data){
+function createReadMe(data,linfo,){
     return `#${data.title}
     ##Description
 
@@ -21,7 +21,7 @@ function createReadMe(data){
 
     ##Credits
 
-    I worked with ${data.contribution} on this project.
+    I worked with alone on this project.
 
     ##license
 
@@ -31,6 +31,10 @@ function createReadMe(data){
     
     ${badge}
 
+    ##How to contribute
+
+    ${data.contribution}
+    
     ##Test instructions
 
     ${data.test-instructions}
