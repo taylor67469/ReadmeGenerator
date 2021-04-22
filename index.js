@@ -24,8 +24,8 @@ const questions=[
     },
     {
         type: 'input',
-        message: 'Enter contribution guidelines.',
-        name: 'contribution-guidelines',
+        message: 'Enter contributors',
+        name: 'contribution',
     },
     {
         type: 'input',
@@ -43,7 +43,7 @@ function init(){
     inquirer
     .prompt([questions])
     .then((data) => {
-        const filename = `README.md`;
+        const filename = data.title+"README.md";
         writeToFile(filename,readme(data));
     });
 }

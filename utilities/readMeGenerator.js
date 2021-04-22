@@ -18,6 +18,22 @@ function createReadMe(data){
     ##Usage
 
     ${data.usage-information}
+
+    ##Credits
+
+    I worked with ${data.contribution} on this project.
+
+    ##license
+
+    My license is ${data.licensure}
+
+    ##Badges
+    
+    ${badge}
+
+    ##Test instructions
+
+    ${data.test-instructions}
     `
 }
 
