@@ -1,5 +1,9 @@
-function createReadMe(data,linfo,){
+function createReadMe(data,linfo,badge){
     return `#${data.title}
+    ##Badge
+
+    ${badge}
+
     ##Description
 
     ${data.description}
@@ -25,11 +29,7 @@ function createReadMe(data,linfo,){
 
     ##license
 
-    My license is ${data.licensure}
-
-    ##Badges
-    
-    ${badge}
+    My license info ${linfo}
 
     ##How to contribute
 
