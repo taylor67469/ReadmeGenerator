@@ -38,6 +38,10 @@ function createReadMe(data,linfo,badge){
     ##Test instructions
 
     ${data.test-instructions}
+
+    ##Questions
+    my Github: ${data.github} (https://github.com/${data.github})
+    my email address: ${data.email}
     `
 }
 

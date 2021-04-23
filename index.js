@@ -29,7 +29,7 @@ const questions=[
     },
     {
         type: 'input',
-        message: 'Enter test instructions. ',
+        message: 'Enter test instructions.',
         name: 'test-instructions',
     },
     {
@@ -38,6 +38,16 @@ const questions=[
     name: 'licensure',
     choices: ['Apache 2.0','Boost','BSD 3-Clause','BSD 2-Clause'],
     },
+    {
+        type:'input',
+        message:'Enter your Github username!',
+        name:'github',
+    },
+    {
+        type:'input',
+        message:'Enter your Email Address!',
+        name:'email',
+    }
 ];
 function init(){
     inquirer
@@ -54,10 +64,7 @@ function writeToFile(fileName,data){
         if (err)
             return console.log(err);
             console.log(data)
-    })
-    // fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-    //         err ? console.log(err) : console.log('Success!')
-    //     );
+    })   
 }
     init();
 function badgeInfo(data){
