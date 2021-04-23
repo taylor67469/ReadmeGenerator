@@ -15,12 +15,12 @@ const questions=[
     {
         type: 'input',
         message: 'Enter installation instructions.',
-        name: 'installation-instructions',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'Enter usage information.',
-        name: 'usage-information',
+        name: 'usage',
     },
     {
         type: 'input',
@@ -30,13 +30,13 @@ const questions=[
     {
         type: 'input',
         message: 'Enter test instructions.',
-        name: 'test-instructions',
+        name: 'test',
     },
     {
-    type: 'list',
-    message: 'Choose your license!',
-    name: 'licensure',
-    choices: ['Apache 2.0','Boost','BSD 3-Clause','BSD 2-Clause'],
+        type: 'list',
+        message: 'Choose your license!',
+        name: 'licensure',
+        choices: ['Apache 2.0','Boost','BSD 3-Clause','BSD 2-Clause'],
     },
     {
         type:'input',
@@ -51,11 +51,11 @@ const questions=[
 ];
 function init(){
     inquirer
-    .prompt([questions])
+    .prompt(questions)
     .then((data) => {
     const linfo= licenseInfo(data.licensure);
-    const badge= badgeInfo();
-        const filename = data.title+"README.md";
+    const badge= badgeInfo(data.licensure);
+        const filename = data.title+".md";
         writeToFile(filename,readme(data,linfo,badge));
     });
 }
@@ -71,16 +71,16 @@ function badgeInfo(data){
     let badge;
     switch (data){
         case 'Apache 2.0':
-        badge='[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+        badge=`[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
         break;
         case 'Boost':
-        badge='[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)';
+        badge=`[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
         break;
         case 'BSD 3-Clause':
-        badge='[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+        badge=`[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
         break;
         case 'BSD 2-Clause':
-        badge='[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+        badge=`[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
         break;
     }
     return badge;

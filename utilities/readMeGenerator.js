@@ -1,47 +1,47 @@
 function createReadMe(data,linfo,badge){
     return `#${data.title}
-    ##Badge
+##Badge
 
-    ${badge}
+${badge}
 
-    ##Description
+##Description
 
-    ${data.description}
+${data.description}
 
-    ##Table of Contents
+##Table of Contents
 
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits](#credits)
+-[License](#license)
 
-    ##Installation
+##Installation
 
-    ${data.installation-instructions}
+${data.installation}
     
-    ##Usage
+##Usage
 
-    ${data.usage-information}
+${data.usage}
 
-    ##Credits
+##Credits
 
-    I worked with alone on this project.
+I worked alone on this project.
 
-    ##license
+##License
 
-    My license info ${linfo}
+My license info ${linfo}
 
-    ##How to contribute
+##How to contribute
 
-    ${data.contribution}
+${data.contribution}
     
-    ##Test instructions
+##Test instructions
 
-    ${data.test-instructions}
+${data.test}
 
-    ##Questions
-    my Github: ${data.github} (https://github.com/${data.github})
-    my email address: ${data.email}
+##Questions
+my Github: ${data.github} (https://github.com/${data.github})
+my email address: ${data.email}
     `
 }
 
