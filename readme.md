@@ -15,7 +15,10 @@ A readme generator soley based on javascript
 ##Installation
 
 Simply type in the input prompted.
+
+
 ![Screenshot1](./utilities/assets/Screenshot1.png "Screenshot1")
+
 ![Screenshot2](./utilities/assets/Screenshot2.png "Screenshot2")
     
 ##Usage
